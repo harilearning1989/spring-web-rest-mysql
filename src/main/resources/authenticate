@@ -1,0 +1,8 @@
+http://localhost:8081/api/auth/signup
+
+{
+    "username":"user_mod",
+    "email":"mod@gmail.com",
+    "password":"123456",
+    "role":["mod","user"]
+}

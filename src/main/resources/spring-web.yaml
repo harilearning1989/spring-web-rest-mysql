@@ -1,0 +1,67 @@
+server:
+  port: 8081
+spring:
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+    banner-mode: off
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth_mgmt?useSSL=false
+    username: root
+    password: dudkrish1A
+  jpa:
+    hibernate:
+      ddl-auto: none
+    dialect: org.hibernate.dialect.MySQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  jackson:
+    default-property-inclusion: NON_NULL
+  batch:
+    job:
+      enabled: false
+
+product:
+  api:
+    baseUrl: https://dummyjson.com/products
+
+user:
+  api:
+    baseUrl: https://dummyjson.com/users
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "threaddump"
+
+csv:
+  read:
+    gitHubUrl: https://raw.githubusercontent.com/harilearning1989/DataFiles/master/
+    windPrefix: D:/DataFiles/Downloaded/
+    linuxPrefix: /home/hari/MyWork/DataFiles/
+    macPrefix: /Users/hariduddukunta/MyWork/DataFiles/
+
+#Batch DB Details
+library:
+  datasource:
+    url: jdbc:mysql://localhost:3306/batch_job?useSSL=false
+    username: root
+    password: dudkrish1A
+
+#Authentication DB Details
+auth:
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth_mgmt?useSSL=false
+    username: root
+    password: dudkrish1A
+
+first:
+  chunck:
+    size: 10
+
