@@ -95,6 +95,7 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
                                 .requestMatchers("/configuration/**").permitAll()
                                 .requestMatchers("/webjars/**").permitAll()
                                 .requestMatchers("/public").permitAll()
+                                .requestMatchers("/email/**").permitAll()
 
                                 .anyRequest()
                                 .authenticated()
